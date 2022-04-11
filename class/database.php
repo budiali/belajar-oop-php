@@ -6,6 +6,7 @@ class Database{
     var $uname = "root";
     var $password = "";
     var $db = "malasngoding";
+
     
     function __construct()
     {
@@ -31,6 +32,11 @@ class Database{
             $hasil[] = $d;
         }
         return $hasil;
+    }
+
+    function input($nama, $alamat, $usia){
+        $koneksi = $this->connection_db();
+        mysqli_query($koneksi, "insert into user values('','$nama', '$alamat', '$usia')");
     }
 
 }

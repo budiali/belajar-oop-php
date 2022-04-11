@@ -10,7 +10,7 @@ $db = new Database();
     <title>Document</title>
 </head>
 <body>
-
+    <a href="form_input.php">Tambah Data</a>
     <table>
         <tr>
             <td>nama</td>
