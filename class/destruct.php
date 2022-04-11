@@ -21,7 +21,7 @@ class classConstruct{
     }
 
     function tampilNama(){
-        echo "Nama saya Ulil Albab <br>";
+        echo "Nama saya Ulil Albab || function -> ". __FUNCTION__ ."() <br>";
     }
 
 }
