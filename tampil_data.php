@@ -3,12 +3,14 @@ $db = new Database();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <a href="form_input.php">Tambah Data</a>
     <table>
@@ -17,14 +19,18 @@ $db = new Database();
             <td>alamat</td>
             <td>usia</td>
         </tr>
-        <?php foreach($db->ambil_data() as $d) { ?>
-        <tr>
-            <td> <?= $d['nama']; ?> </td>
-            <td> <?= $d['alamat']; ?></td>
-            <td><?= $d['usia']; ?></td>
-        </tr>
+        <?php foreach ($db->ambil_data() as $d) { ?>
+            <tr>
+                <td> <?= $d['nama']; ?> </td>
+                <td> <?= $d['alamat']; ?></td>
+                <td><?= $d['usia']; ?></td>
+                <td>
+                    <a href="edit.php?id=<?= $d["id"]; ?>&aksi=edit">Edit</a> | <a href="proses.php?id=<?= $d["id"]; ?>&aksi=hapus">Hapus</a>
+                </td>
+            </tr>
         <?php } ?>
     </table>
-    
+
 </body>
+
 </html>
