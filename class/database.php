@@ -8,15 +8,15 @@ class Database{
     var $db = "malasngoding";
 
     
-    function __construct()
-    {
-        $koneksi = $this->connection_db();
-        if($koneksi){
-            echo "Database berhasil terhubung!";
-        }else{
-            echo "Database gagal terhubung";
-        }
-    }
+    // function __construct()
+    // {
+    //     $koneksi = $this->connection_db();
+    //     if($koneksi){
+    //         echo "Database berhasil terhubung!";
+    //     }else{
+    //         echo "Database gagal terhubung";
+    //     }
+    // }
 
     function connection_db(){
         // static $conn;
@@ -42,5 +42,3 @@ class Database{
 }
 
 // $newDb = new Database();
-
-?>
